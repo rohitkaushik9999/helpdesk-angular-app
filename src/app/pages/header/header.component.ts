@@ -10,7 +10,15 @@ export class HeaderComponent implements OnInit {
 
   constructor(private authenticationService: AuthenticationService) { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  isLoggedIn(){
+    const currentUser = this.authenticationService.currentUserValue;
+    if (currentUser) {
+      return true;
+    }else{
+      return false;
+    }
   }
 
   logout(){
