@@ -295,8 +295,12 @@
   }
 </style>
 
+<div>
+  <app-header></app-header>
+</div>
+
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
+<div class="toolbar" role="banner" *ngIf=!show>
   <img
     width="40"
     alt="Angular Logo"
